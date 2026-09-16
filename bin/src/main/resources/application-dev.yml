@@ -1,0 +1,19 @@
+# Local dev: in-memory H2 so `mvn spring-boot:run` works with zero setup.
+# Swap to the postgres block below (or use `prod` profile) once Postgres is running locally.
+spring:
+  datasource:
+    url: jdbc:h2:mem:tawjihi;DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console

@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: scholarships-api
+  profiles:
+    active: dev
+  jackson:
+    default-property-inclusion: non_null
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:this-is-a-dev-only-secret-change-it-please-32chars}
+    expiration-ms: 86400000
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:5173}
+
+server:
+  port: ${PORT:8080}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health
