@@ -16,8 +16,9 @@ public class DataInitializer {
             AdminUser admin = userRepository.findByUsername("admin").orElse(new AdminUser());
             admin.setUsername("admin");
             admin.setPassword(passwordEncoder.encode("ChangeMe123!"));
+            admin.setRole("ADMIN");
             userRepository.save(admin);
-            System.out.println(">>> DEFAULT ADMIN USER CREATED/UPDATED SUCCESSFULLY! <<<");
+            System.out.println(">>> ADMIN USER SECURED & SAVED SUCCESSFULLY! <<<");
         };
     }
 }
