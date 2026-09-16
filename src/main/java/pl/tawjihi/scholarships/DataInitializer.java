@@ -13,13 +13,11 @@ public class DataInitializer {
     @Bean
     CommandLineRunner initDatabase(AdminUserRepository userRepository, PasswordEncoder passwordEncoder) {
         return args -> {
-            if (userRepository.findByUsername("admin").isEmpty()) {
-                AdminUser admin = new AdminUser();
-                admin.setUsername("admin");
-                admin.setPassword(passwordEncoder.encode("ChangeMe123!"));
-                userRepository.save(admin);
-                System.out.println("Default admin user created successfully.");
-            }
+            AdminUser admin = userRepository.findByUsername("admin").orElse(new AdminUser());
+            admin.setUsername("admin");
+            admin.setPassword(passwordEncoder.encode("ChangeMe123!"));
+            userRepository.save(admin);
+            System.out.println(">>> DEFAULT ADMIN USER CREATED/UPDATED SUCCESSFULLY! <<<");
         };
     }
 }
