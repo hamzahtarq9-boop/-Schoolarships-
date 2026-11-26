@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<style>
+@page { size: A4; margin: 0; }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Carlito", Calibri, Arial, sans-serif; color: #111; }
+.page { width: 210mm; height: 296mm; overflow: hidden; padding: 13mm 16mm 12mm; display: flex; flex-direction: column; }
+.frame { border: 1.2pt solid #222; padding: 7mm 11mm 6mm; flex: 1; display: flex; flex-direction: column; }
+h1 { text-align: center; font-size: 19pt; margin: 0 0 4mm; font-weight: 700; letter-spacing: 0.5pt; }
+h1 span { border-bottom: 1.5pt solid #111; padding-bottom: 1mm; }
+table.info { border-collapse: collapse; font-size: 11.5pt; margin-bottom: 3mm; width: 100%; }
+table.info td { white-space: nowrap; padding: 0.6mm 4mm 0.6mm 0; }
+table.info td.k { font-weight: 700; width: 1%; }
+hr { border: 0; border-top: 0.8pt solid #888; margin: 0 0 3.5mm; }
+.body { font-size: 12pt; line-height: 1.45; text-align: justify; }
+.body p { margin: 0 0 2.6mm; }
+.sign { margin-top: auto; padding-top: 4mm; border-top: 0.8pt solid #bbb; display: flex; justify-content: space-between; align-items: flex-end; font-size: 11pt; line-height: 1.45; }
+.who b { font-size: 12pt; }
+.marks { display: flex; gap: 8mm; align-items: flex-end; }
+.lines div { margin-top: 6mm; white-space: nowrap; }
+.line { display: inline-block; width: 45mm; border-bottom: 1pt solid #111; }
+.stamp { width: 30mm; height: 22mm; border: 1pt dashed #888; color: #888; font-size: 9pt; display: flex; align-items: center; justify-content: center; text-align: center; }
+.closing { font-size: 12pt; line-height: 1.45; margin-top: 2mm; }
+</style></head>
+<body><div class="page"><div class="frame">
+<h1><span>LETTER OF RECOMMENDATION</span></h1>
+<table class="info">
+<tr><td class="k">Recommender:</td><td>Ali Abdelkarim Ali Gouda</td><td class="k">Department:</td><td>Scientific Department</td></tr>
+<tr><td class="k">Phone:</td><td>00970592101938</td><td class="k">Email:</td><td>ali_gouda1993@hotmail.com</td></tr>
+<tr><td class="k">Date:</td><td colspan="3">{{DATE}}</td></tr>
+<tr><td class="k">To:</td><td colspan="3">Scholarship Committee – {{TO}}</td></tr>
+</table>
+<hr>
+<div class="body">
+<p>Dear Members of the Scholarship Committee,</p>
+<p>I am pleased to recommend <b>Hamzah Tareq Fawwaz Alnabahin</b>, whom I taught in the Scientific Stream during his secondary school years in Gaza. I know him well as a serious, disciplined student who wants to understand a subject rather than memorize it. He completed the General Secondary Examination (Tawjihi) with an average of <b>96.3%</b>, a result that reflects steady work over several years, not a single good exam.</p>
+<p>Physics is where he stood out most. He earned a grade of <b>93</b> in the subject, but what I noticed more was the way he thinks: he asks why a law holds before he applies it, and he tries to connect it to things he sees around him. This showed in practice when he and a team of classmates won a <b>regional school award for Best Physics Project</b>. He played a clear part in turning the theoretical idea into a working model, and he worked well with the rest of the team.</p>
+<p>Hamzah did not stop learning after he graduated. He is currently taking first-year General Engineering courses online, including Calculus I, Electric Circuits, and Programming in C. He has also taught himself software and web development, working with HTML, CSS, SCSS, Java, Spring Boot, React, and PostgreSQL. He has already built real projects with these tools, which gives him a practical head start in Software Engineering and Computer Science. For a student to keep learning under the difficult conditions we live in Gaza, where study is often interrupted, says a great deal about his motivation and his ability to rely on himself.</p>
+<p>In his community, Hamzah works as a volunteer coordinator with the <b>Takiyat Al-Khair</b> initiative, where he handles beneficiary registration, organizes distribution lists, and manages the initiative's website. This work requires accuracy and a real sense of responsibility. He also runs a scholarship information network that helps students find university opportunities, and he works in photography and visual production.</p>
+<p>Based on what I know of his academic ability, commitment, and character, I believe Hamzah is well prepared for bachelor's studies in Software Engineering or Computer Science, and that support from {{TO}} would be well placed in him. I recommend him without reservation. I would be glad to provide any further information using the contact details above.</p>
+<p style="margin-top:4mm">Sincerely,</p>
+</div>
+<div class="closing"><b>Ali Abdelkarim Ali Gouda</b><br>Teacher, Scientific Department</div>
+</div></div></body></html>
